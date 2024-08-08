@@ -28,3 +28,15 @@ git push
 
 ##### Eliminar una rama remota
  git push origin --delete nombre_rama
+
+##### Traer cambios de una rama remota a rama local.
+git pull origin nombre_rama
+
+##### Traer commits de rama remota para luego aplicar los cambios de rama local en un commit nuevo.
+```git
+git fetch origin
+git rebase origin/nombre_rama_en_uso
+git add .
+git rebase --continue
+git push --set-upstream origin nombre_rama_en_uso
+```
