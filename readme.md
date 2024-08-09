@@ -40,3 +40,13 @@ git add .
 git rebase --continue
 git push --set-upstream origin nombre_rama_en_uso
 ```
+##### eliminar ultimo commit.
+git reset --hard HEAD~1
+
+##### integrar los cambios al último commit sin crear un nuevo commit para ello.
+```git
+git add .
+git commit --amend  //se abrira un editor, entonces guardar los cambios.
+git push origin nombre-de-tu-rama --force //forzar sobreescritura del ultimo commit remoto.
+
+```
